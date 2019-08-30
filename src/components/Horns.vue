@@ -6,13 +6,12 @@
 export default {
   name: 'Horns',
   methods: {
-    type: function(event) {
-      this.loaded = true;
-      setTimeout(() => {
-          console.log('yella');
-          this.loaded = false;
-      }, 2000);
-    }
+    // type: function(event) {
+    //   this.loaded = true;
+    //   setTimeout(() => {
+    //       this.loaded = false;
+    //   }, 2000);
+    // }
   }
 }
 </script>
@@ -26,6 +25,8 @@ export default {
   transform: translate(-50% -50%);
   letter-spacing: -.25rem;
   animation: fadeOut .4s ease-in-out 4s 1 forwards;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
   &:after {
     content: "";
     animation: horns 1s infinite;

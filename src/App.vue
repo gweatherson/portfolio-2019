@@ -1,10 +1,9 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/work">Work</router-link>
-      <router-link to="/contact">Contact</router-link>
+    <div class="menu">
+      <router-link to="/about" class="menu__link">About</router-link>
+      <router-link to="/work" class="menu__link">Work</router-link>
+      <router-link to="/contact" class="menu__link">Contact</router-link>
     </div>
     <transition name="fade" mode="out-in">
       <router-view/>
@@ -13,7 +12,9 @@
 </template>
 
 <style lang="scss">
+@import url('assets/scss/reset.scss');
 @import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
 
 .fade-enter-active,
 .fade-leave-active {
@@ -28,30 +29,58 @@
 }
 
 #nav {
-  display: none;
+  opacity: .1;
+}
+
+#app {
+  height: 100%;
 }
 
 $containerWidth: 117rem;
 
-$black: #1e2022;
-$grey: #52616b;
-$lightblue: #c9d6df;
-$white: #f0f5f9;
-
-$textColor: $lightblue;
-$fontFamilyText: 'Space Mono', monospace;
+$black: #303841;
+$grey: #3a4750;
+$red: #d72323;
+$white: #eee;
+$blue: #23d7d7;
 
 html {
   font-size: 10px;
 }
 
 body {
-  font-size: 1.2rem;
-  color: $textColor;
-  background-color: $black;
-  margin: 0;
-  font-family: $fontFamilyText;
-  padding: 20px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  // color: $white;
+  font-family: 'Bitter', serif;
+  // padding: 2rem;
+  height: 100%;
+
+  &.home {
+    // background-color: $black;
+  }
+
+  &.about {
+    // background-color: $white;
+  }
+
+  &.work {
+    // background-color: $red;
+  }
+
+  &.contact {
+    // background-color: $black;
+  }
+}
+
+p {
+
+  margin-bottom: 2.5rem;
+}
+
+a {
+  // color: $red;
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5 {
@@ -62,5 +91,16 @@ h1, h2, h3, h4, h5 {
   max-width: $containerWidth;
   margin: auto;
   width: 100%;
+}
+
+.menu {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  &__link {
+    padding: 2rem;
+    text-transform: uppercase;
+  }
 }
 </style>
