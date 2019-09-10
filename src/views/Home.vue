@@ -36,7 +36,8 @@ export default {
       if(this.useEvents === true) {
         clearInterval(checkEvents);
         let type = document.querySelector('.type');
-        type.addEventListener('keydown', (event) => {
+        let home = document.querySelector('.home');
+        home.addEventListener('keydown', (event) => {
           if (event.keyCode === 13) {
             this.$router.replace({ path: 'about' }).catch(err => {})
           }

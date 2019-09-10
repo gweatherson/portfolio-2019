@@ -68,9 +68,14 @@ export default {
     }
     animation: type 4s steps(50, end) 6s 1;
     animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 
     @media (min-width: 768px) {
       animation: type 10s steps(150, end) 6s 1;
+      animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
     }
 
     &.\--desktop {
