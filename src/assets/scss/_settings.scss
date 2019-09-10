@@ -1,0 +1,133 @@
+$containerWidth: 117rem;
+
+$black: #303841;
+$grey: #3a4750;
+$red: #d72323;
+$white: #eee;
+$blue: #23d7d7;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Bitter', serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  background-color: $black;
+  color: $white;
+  padding: 0 2rem 0 2rem;
+  height: 100%;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+
+  &.home {
+    height: 100vh;
+    overflow: hidden;
+    @media (min-width: 768px) {
+      height: auto;
+    }
+    .menu {
+      display: none;
+    }
+  }
+
+  &.about {
+    background-color: $white;
+    color: $black;
+
+    a:link, a:visited {
+      color: $black;
+      text-decoration: underline;
+      text-decoration-skip: edges;
+    }
+
+    a.menu__link {
+      text-decoration: none;
+      &.router-link-active {
+        color: $red;
+      }
+    }
+  }
+
+  &.work {
+    a.menu__link {
+      &.router-link-active {
+        color: $blue;
+      }
+    }
+  }
+
+  &.contact {
+    a.menu__link {
+      &.router-link-active {
+        color: $red;
+      }
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+#nav {
+  opacity: .1;
+}
+
+#app {
+  height: 100%;
+}
+
+p {
+  margin-bottom: 2.5rem;
+}
+
+a:link, a:visited, button {
+  color: $white;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+.container {
+  max-width: $containerWidth;
+  margin: auto;
+  width: 100%;
+}
+
+.menu {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    justify-content: flex-end;
+    left: auto;
+    right: 2rem;
+    top: 2rem;
+  }
+
+  &__link {
+    padding: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}

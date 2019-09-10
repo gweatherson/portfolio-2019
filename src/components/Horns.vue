@@ -5,24 +5,15 @@
 <script>
 export default {
   name: 'Horns',
-  methods: {
-    // type: function(event) {
-    //   this.loaded = true;
-    //   setTimeout(() => {
-    //       this.loaded = false;
-    //   }, 2000);
-    // }
-  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .horns {
-  position: fixed;
-  left: 50%;
+  position: absolute;
   top: 50%;
-  transform: translate(-50% -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   letter-spacing: -.25rem;
   animation: fadeOut .4s ease-in-out 4s 1 forwards;
   font-family: 'Space Mono', monospace;

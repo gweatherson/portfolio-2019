@@ -6,11 +6,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import router from 'vue-router'
 import Horns from '@/components/Horns.vue'
 import Type from '@/components/Type.vue'
-
 
 export default {
   name: 'home',
@@ -21,16 +18,36 @@ export default {
   beforeCreate: function() {
     document.body.className = 'home';
   },
+  data()  {
+    return {
+      useEvents: false,
+    }
+  },
+  methods: {
+    setupEvents: function () {
+      setTimeout(() => {
+        this.$set(this, 'useEvents', true);
+      }, 13000);
+    }
+  },
   mounted() {
-    window.addEventListener('keyup', (event) => {
-      if (event.keyCode === 13) {
-        this.$router.push('about');
+    this.setupEvents();
+    let checkEvents =  window.setInterval(() => {
+      if(this.useEvents === true) {
+        clearInterval(checkEvents);
+        let type = document.querySelector('.type');
+        type.addEventListener('keydown', (event) => {
+          if (event.keyCode === 13) {
+            this.$router.replace({ path: 'about' }).catch(err => {})
+          }
+        });
+
+        type.addEventListener('pointerdown', (event) => {
+          this.$router.replace({ path: 'about' }).catch(err => {})
+        });
       }
-    });
+    }, 500);
+    this.$set(this, 'useEvents', false);
   }
 }
 </script>
-
-<style lang="scss">
-
-</style>

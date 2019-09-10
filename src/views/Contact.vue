@@ -1,16 +1,16 @@
 <template>
   <div class="contact__container">
-
     <div class="contact__content">
-      <div class="contact__lead">Have something to get off your chest? Let's chat.</div>
-      <div class="contact__email">gweatherson@gmail.com</div>
+      <div class="contact__lead">Have something to say? Let's chat.</div>
+      <div class="contact__email"><a href="mailto:gweatherson@gmail.com">gweatherson@gmail.com</a></div>
     </div>
 
-<!--     Elsewhere
-    LinkedIn
-    Github
-    Instagram
-    Email -->
+    <div class="contact__elsewhere">
+      <a href="https://www.linkedin.com/in/gweatherson/">LinkedIn</a>
+      <a href="https://github.com/gweatherson">Github</a>
+      <a href="https://instagram.com/blkedy">Instagram</a>
+      <a href="mailto:gweatherson@gmail.com">Email</a>
+    </div>
   </div>
 </template>
 
@@ -18,25 +18,32 @@
 
 export default {
   name: 'contact',
+  data()  {
+    return {
+    }
+  },
   beforeCreate: function() {
     document.body.className = 'contact';
+  },
+  mounted() {
   }
 }
 </script>
 
 <style lang="scss">
-  $black: #303841;
-  $grey: #3a4750;
-  $red: #d72323;
-  $white: #eee;
-  $blue: #23d7d7;
-
   .contact {
     position: relative;
 
     &__container {
       display: grid;
-      height: 100vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: 90% 10%;
+      grid-template-areas: "." ".";
+      height: calc(100vh - 10rem);
+
+      @media (min-width: 768px) {
+        height: 100vh;
+      }
     }
 
     &__content {
@@ -46,13 +53,28 @@ export default {
 
     &__lead {
       font-family: 'Bitter', serif;
-      font-size: 3rem;
+      font-size: 2rem;
+
+      @media (min-width: 768px) {
+        font-size: 3rem;
+      }
     }
 
     &__email {
-      font-family: 'Space Mono', monospace;
-      text-transform: uppercase;
-      // color: $red;
+      color: $red;
+
+      a {
+        color: $red;
+      }
+    }
+
+    &__elsewhere {
+      display: flex;
+      justify-content: center;
+
+      a {
+        padding: 1rem;
+      }
     }
 
   }
