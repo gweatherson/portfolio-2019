@@ -9,7 +9,6 @@
       <a href="https://www.linkedin.com/in/gweatherson/">LinkedIn</a>
       <a href="https://github.com/gweatherson">Github</a>
       <a href="https://instagram.com/blkedy">Instagram</a>
-      <a href="mailto:gweatherson@gmail.com">Email</a>
     </div>
   </div>
 </template>
