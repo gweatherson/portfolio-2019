@@ -6,8 +6,15 @@
       <button class="work-container__warning-button" @click='toggle = !toggle'>Whatever Pal.</button>
     </div>
 
-    <div class="notice">
-      Nothing to see here, yet.
+    <div class="work-list">
+      <div class="work-list__item">
+        <h2 class="work-list__item-title">Project: Dribbble Inspiration</h2>
+        <img class="work-list__item-image" src="../assets/images/portfolio/01.png" alt="Dribbble Inspiration screen of the home page" />
+        <div class="work-list__item-links">
+          <a href="https://glennweatherson.com/projects/dribbble-inspiration/" target="_blank" class="work-list__item-link">View Project</a>
+          <a href="https://github.com/gweatherson/dribbble-semantics" target="_blank" class="work-list__item-link">View on Github</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -32,10 +39,12 @@ export default {
 <style lang="scss" scoped>
 .work-container {
   &__warning {
+    position: absolute;
     max-width: 50rem;
     padding: 2rem;
     border: 4px solid $blue;
     border-top: 14px solid $blue;
+    background-color: $black;
     margin-top: 2.8rem;
     margin-left: 0;
 
@@ -50,6 +59,7 @@ export default {
     font-family: 'Space Mono', monospace;
     text-transform: uppercase;
     color: $blue;
+    margin-bottom: 1rem;
   }
 
   &__warning-description {
@@ -60,6 +70,7 @@ export default {
     text-transform: uppercase;
     padding: 1rem 0;
     display: block;
+    margin-top: 2rem;
   }
 
   button {
@@ -69,43 +80,47 @@ export default {
     color: $blue;
     padding: 1rem 0;
   }
+}
 
-  .notice {
-    opacity: .6;
-    text-align: center;
-    font-family: 'Space Mono', monospace;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -70%);
+.work-list {
+  max-width: 114rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 2rem;
 
-    @media (min-width: 768px) {
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
+  @media (min-width: 768px) {
+    padding-top: 14rem;
+  }
 
-    &:after {
-      position: absolute;
-      animation: sadface 2s infinite;
-      transform: rotate(90deg);
-      content: "";
-      top: 5.5rem;
-      left: 0;
-      right: 0;
-
-      @media (min-width: 768px) {
-        top: 2.5rem;
-      }
-    }
-
-    @keyframes sadface {
-      0% { content: ":|"; }
-      25% { content: ":("; }
-      50% { content: ":|"; }
-      75% { content: ":("; }
-      100% { content: ":|"; }
+  &__item {
+    width: 100%;
+    text-align: right;
+    img {
+      max-width: 100%;
     }
   }
 
+  &__item-title {
+    text-transform: uppercase;
+    color: $blue;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__item-links {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-link {
+    padding: 2rem;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
 }
 </style>
