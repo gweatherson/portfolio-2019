@@ -3,9 +3,9 @@
     <div class="work-list">
       <div class="work-list__item">
         <h2 class="work-list__item-title"><a href="https://glennweatherson.com/projects/dribbble-inspiration/">Project: Dribbble Inspiration</a></h2>
-        <img class="work-list__item-image" src="../assets/images/portfolio/01.png" alt="Dribbble Inspiration screen of the home page" />
+        <a href="https://glennweatherson.com/projects/dribbble-inspiration/"><img class="work-list__item-image" src="../assets/images/portfolio/01.png" alt="Dribbble Inspiration screen of the home page" /></a>
         <div class="work-list__item-description">
-          This project is based off a Dribbble design. The work isn't real, there is nothing to buy and no one to contact. This is a opportunity for me to practice habits and build designs outside of team based agency work where full credit cannot be taken.
+          This project is based off a Dribbble design. The work isn't real, there is nothing to buy and no one to contact. This is an opportunity for me to practice proper semantic habits and code a design outside of team based agency work where full credit cannot be taken. There are so many tools, frameworks, bells &amp; whistles on the modern web and I feel that the industry has lost sight of what's most important: All humans being able to browse a site, oh and the robots too.
         </div>
         <div class="work-list__item-links">
           <a href="https://glennweatherson.com/projects/dribbble-inspiration/" class="work-list__item-link">View Project</a>
@@ -97,7 +97,7 @@ export default {
     padding: 2rem;
     color: $blue;
 
-    &:visited {
+    &:link, &:visited {
       color: $blue;
     }
 
