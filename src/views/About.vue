@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <article role="main" class="about">
 
     <div class="about__column">
       <div class="about__lead">Oh hey! People call me Glenn.</div>
@@ -13,7 +13,7 @@
     <div class="about__column">
       <img src="../assets/images/me.jpg" alt="Photo of me in Downieville, California." class="about__image">
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

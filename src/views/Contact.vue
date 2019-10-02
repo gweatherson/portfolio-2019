@@ -1,5 +1,5 @@
 <template>
-  <div class="contact__container">
+  <article role="main" class="contact__container">
     <div class="contact__content">
       <div class="contact__lead">Have something to say? Let's chat.</div>
       <div class="contact__email"><a href="mailto:gweatherson@gmail.com">gweatherson@gmail.com</a></div>
@@ -10,7 +10,7 @@
       <a href="https://github.com/gweatherson">Github</a>
       <a href="https://instagram.com/blkedy">Instagram</a>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>
@@ -36,7 +36,7 @@ export default {
     &__container {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 90% 10%;
+      grid-template-rows: 80% 20%;
       grid-template-areas: "." ".";
       height: calc(100vh - 10rem);
 
@@ -60,10 +60,10 @@ export default {
     }
 
     &__email {
-      color: $red;
+      color: $blue;
 
       a {
-        color: $red;
+        color: $blue;
       }
     }
 

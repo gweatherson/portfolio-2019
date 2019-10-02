@@ -2,7 +2,7 @@ $containerWidth: 117rem;
 
 $black: #303841;
 $grey: #3a4750;
-$red: #d72323;
+$red: #8e1717;
 $white: #eee;
 $blue: #23d7d7;
 
@@ -63,7 +63,7 @@ body {
   &.contact {
     a.menu__link {
       &.router-link-active {
-        color: $red;
+        color: $blue;
       }
     }
   }

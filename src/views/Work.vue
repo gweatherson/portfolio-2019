@@ -1,19 +1,19 @@
 <template>
-  <div class="work-container">
+  <article role="main" class="work-container">
     <div class="work-list">
       <div class="work-list__item">
-        <h2 class="work-list__item-title"><a href="https://glennweatherson.com/projects/dribbble-inspiration/" target="_blank">Project: Dribbble Inspiration</a></h2>
+        <h2 class="work-list__item-title"><a href="https://glennweatherson.com/projects/dribbble-inspiration/">Project: Dribbble Inspiration</a></h2>
         <img class="work-list__item-image" src="../assets/images/portfolio/01.png" alt="Dribbble Inspiration screen of the home page" />
         <div class="work-list__item-description">
           This project is based off a Dribbble design. The work isn't real, there is nothing to buy and no one to contact. This is a opportunity for me to practice habits and build designs outside of team based agency work where full credit cannot be taken.
         </div>
         <div class="work-list__item-links">
-          <a href="https://glennweatherson.com/projects/dribbble-inspiration/" target="_blank" class="work-list__item-link">View Project</a>
-          <a href="https://github.com/gweatherson/dribbble-semantics" target="_blank" class="work-list__item-link">View on Github</a>
+          <a href="https://glennweatherson.com/projects/dribbble-inspiration/" class="work-list__item-link">View Project</a>
+          <a href="https://github.com/gweatherson/dribbble-semantics" class="work-list__item-link">View on Github</a>
         </div>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>
