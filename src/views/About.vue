@@ -11,7 +11,11 @@
       <p>My passion on the web lies in HTML & CSS while pushing back on conformity. Writing SASS using BEM is my sweet spot. Being challenged on new design ideas that translate into a place people get to visit keeps work fascinating and fulfilling.</p>
     </div>
     <div class="about__column">
-      <img src="../assets/images/me.jpg" alt="Photo of me in Downieville, California." class="about__image">
+    <picture class="about__image">
+      <source srcset="../assets/images/me.webp" type="image/webp">
+      <source srcset="../assets/images/me.jpg" type="image/jpeg">
+      <img src="../assets/images/me.jpg" alt="Photo of me in Downieville, California.">
+    </picture>
     </div>
   </article>
 </template>
@@ -82,6 +86,13 @@ export default {
   &__image {
     max-width: 100%;
     height: auto;
+    display: block;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
     @media (min-width: 768px) {
       padding-top: 20%;
     }
