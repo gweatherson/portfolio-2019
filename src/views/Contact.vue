@@ -6,9 +6,9 @@
     </div>
 
     <div class="contact__elsewhere">
-      <a href="https://www.linkedin.com/in/gweatherson/">LinkedIn</a>
-      <a href="https://github.com/gweatherson">Github</a>
-      <a href="https://instagram.com/blkedy">Instagram</a>
+      <a href="https://www.linkedin.com/in/gweatherson/" aria-label="Visit my profile on LinkedIn">LinkedIn</a>
+      <a href="https://github.com/gweatherson" aria-label="Visit my profile on GitHub">GitHub</a>
+      <a href="https://instagram.com/blkedy" aria-label="Visit my photos and videos on Instagram">Instagram</a>
     </div>
   </article>
 </template>
